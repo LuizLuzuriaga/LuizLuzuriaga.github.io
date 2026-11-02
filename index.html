@@ -2,179 +2,216 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Luiz Luzuriaga · Ciencias actuariales y financieras</title>
     <meta name="description" content="Luiz Luzuriaga, estudiante del Máster en Ciencias Actuariales y Financieras (Universidad de Alcalá). Guías de estudio, simulaciones y Gedankenpalast, un atlas 3D de conocimiento.">
-    <meta name="theme-color" content="#e2e2e2">
+    <meta name="theme-color" content="#e3e1dc">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Luiz Luzuriaga · Ciencias actuariales y financieras">
     <meta property="og:description" content="Guías de estudio, simulaciones y Gedankenpalast, un atlas 3D de conocimiento. En abierto y en español.">
     <meta property="og:url" content="https://luizluzuriaga.github.io/">
     <meta property="og:image" content="https://luizluzuriaga.github.io/img/atlas.jpg">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%230a0a0b'/%3E%3Cellipse cx='11' cy='9' rx='3.5' ry='2' fill='%232a2a2d' transform='rotate(-32 11 9)'/%3E%3C/svg%3E">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%2305070a'/%3E%3Ccircle cx='23' cy='9' r='3' fill='%23f7941d'/%3E%3C/svg%3E">
     <link rel="preload" as="image" href="img/atlas.jpg" fetchpriority="high">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://api.fontshare.com">
+    <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=gambarino@400&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
 
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="bars" viewBox="0 0 1000 56" preserveAspectRatio="none"><rect x="0" width="12" height="56"/><rect x="18" width="18" height="56"/><rect x="42" width="6" height="56"/><rect x="72" width="12" height="56"/><rect x="90" width="6" height="56"/><rect x="114" width="12" height="56"/><rect x="150" width="6" height="56"/><rect x="168" width="6" height="56"/><rect x="192" width="6" height="56"/><rect x="204" width="12" height="56"/><rect x="240" width="18" height="56"/><rect x="264" width="12" height="56"/><rect x="282" width="24" height="56"/><rect x="312" width="6" height="56"/><rect x="336" width="12" height="56"/><rect x="354" width="12" height="56"/><rect x="384" width="6" height="56"/><rect x="414" width="6" height="56"/><rect x="432" width="6" height="56"/><rect x="456" width="12" height="56"/><rect x="474" width="12" height="56"/><rect x="492" width="18" height="56"/><rect x="516" width="6" height="56"/><rect x="546" width="12" height="56"/><rect x="564" width="6" height="56"/><rect x="588" width="12" height="56"/><rect x="624" width="6" height="56"/><rect x="642" width="6" height="56"/><rect x="666" width="6" height="56"/><rect x="678" width="12" height="56"/><rect x="714" width="18" height="56"/><rect x="738" width="12" height="56"/><rect x="756" width="24" height="56"/><rect x="786" width="6" height="56"/><rect x="810" width="12" height="56"/><rect x="828" width="12" height="56"/><rect x="858" width="6" height="56"/><rect x="888" width="6" height="56"/><rect x="906" width="6" height="56"/><rect x="930" width="12" height="56"/><rect x="948" width="12" height="56"/><rect x="966" width="18" height="56"/><rect x="990" width="6" height="56"/></symbol>
+</svg>
+
 <a class="skip" href="#proyectos">Saltar al contenido</a>
-<header class="top">
+
+<header class="bar" id="bar">
     <a class="wordmark" href="#inicio">Luiz Luzuriaga</a>
     <nav aria-label="Principal">
         <a href="#proyectos">Proyectos</a>
         <a href="#sobre-mi">Sobre mí</a>
-        <a href="#gedankenpalast">Gedankenpalast</a>
+        <a class="bar-cta" href="https://luizluzuriaga.github.io/Gedankenpalast/">Gedankenpalast</a>
     </nav>
 </header>
 
 <main id="inicio">
 
     <section class="hero" aria-labelledby="titulo">
-        <h1 id="titulo" class="statement">
-            <span class="mask"><span class="line l1">Luiz</span></span>
-            <span class="mask"><span class="line l2">Luzuriaga</span></span>
-        </h1>
-        <div class="hero-foot">
-            <p class="lead hero-lead">Máster en Ciencias Actuariales y Financieras. Guías de estudio y un atlas 3D, en abierto.</p>
-            <a class="btn" href="#proyectos">Ver proyectos</a>
+        <div class="card">
+            <svg class="stripe" aria-hidden="true" focusable="false"><use href="#bars"/></svg>
+            <div class="card-body">
+                <h1 id="titulo" class="display h1">
+                    <span class="mask"><span class="line l1">Luiz</span></span>
+                    <span class="mask"><span class="line l2">Luzuriaga</span></span>
+                </h1>
+                <p class="lead hero-lead">Máster en Ciencias Actuariales y Financieras. Guías de estudio y un atlas 3D, en abierto.</p>
+                <a class="btn" href="#proyectos">Ver proyectos</a>
+                <p class="tab" id="exam-tab" hidden></p>
+                <dl class="ficha">
+                    <div><dt>Estudios</dt><dd>Máster en Ciencias Actuariales y Financieras</dd></div>
+                    <div><dt>Universidad</dt><dd>Universidad de Alcalá</dd></div>
+                    <div><dt>Curso</dt><dd>Segundo año</dd></div>
+                </dl>
+            </div>
+            <nav class="card-links" aria-label="Secciones">
+                <a href="#proyectos">Proyectos</a>
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="https://github.com/LuizLuzuriaga">GitHub</a>
+            </nav>
         </div>
-    </section>
-
-    <section class="work" id="proyectos" aria-labelledby="h-proyectos">
-        <div class="work-col">
-            <h2 id="h-proyectos" class="sub" data-r>Proyectos</h2>
-            <ul class="ledger" id="ledger">
-                <li data-r>
-                    <a href="https://luizluzuriaga.github.io/Gedankenpalast/" data-img="img/atlas.jpg" data-alt="El atlas 3D de Gedankenpalast: cúmulos de puntos blancos con un tema abierto en el panel lateral">
-                        <span class="n">Gedankenpalast</span><span class="k">Atlas 3D de estudio</span><span class="y">2026</span>
-                    </a>
-                </li>
-                <li data-r>
-                    <a href="https://luizluzuriaga.github.io/Gedankenpalast/Fundacion/guias/simulacion.html" data-img="img/simulacion.jpg" data-alt="Guía de Simulación y modelos para el análisis de datos actuariales y financieros">
-                        <span class="n">Simulación y modelos</span><span class="k">Guía de estudio</span><span class="y">2026</span>
-                    </a>
-                </li>
-                <li data-r>
-                    <a href="https://luizluzuriaga.github.io/Gedankenpalast/Fundacion/guias/bayesiana.html" data-img="img/bayesiana.jpg" data-alt="Guía de Estadística bayesiana con laboratorios interactivos">
-                        <span class="n">Estadística bayesiana</span><span class="k">Guía de estudio</span><span class="y">2026</span>
-                    </a>
-                </li>
-                <li data-r>
-                    <a href="https://luizluzuriaga.github.io/Gedankenpalast/Fundacion/guias/prevision_social.html" data-img="img/psc.jpg" data-alt="Guía de Previsión social con líneas temporales">
-                        <span class="n">Previsión social</span><span class="k">Guía de estudio</span><span class="y">2026</span>
-                    </a>
-                </li>
-                <li data-r>
-                    <a href="https://luizluzuriaga.github.io/Gedankenpalast/Fundacion/guias/seguridad_social.html" data-img="img/asignaturas.jpg" data-alt="Plataforma de tests de Seguridad Social con bloques de preguntas">
-                        <span class="n">Seguridad Social</span><span class="k">Guía de práctica</span><span class="y">2026</span>
-                    </a>
-                </li>
-                <li data-r>
-                    <a href="https://luizluzuriaga.github.io/Actuariales/" data-img="img/actuariales.jpg" data-alt="Portfolio actuarial como habitación interactiva con minijuegos">
-                        <span class="n">Portfolio actuarial</span><span class="k">Habitación interactiva</span><span class="y">2025</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <figure class="preview">
-            <img src="img/atlas.jpg" width="1200" height="750" alt="El atlas 3D de Gedankenpalast: cúmulos de puntos blancos con un tema abierto en el panel lateral" class="is-on">
+        <figure class="room">
+            <img src="img/atlas.jpg" width="1200" height="750" alt="El atlas 3D de Gedankenpalast: cúmulos de puntos blancos con un tema abierto en el panel lateral" class="is-on" fetchpriority="high">
             <img src="img/simulacion.jpg" width="1200" height="750" alt="Guía de Simulación y modelos para el análisis de datos actuariales y financieros" loading="lazy">
             <img src="img/bayesiana.jpg" width="1200" height="750" alt="Guía de Estadística bayesiana con laboratorios interactivos" loading="lazy">
             <img src="img/psc.jpg" width="1200" height="750" alt="Guía de Previsión social con líneas temporales" loading="lazy">
-            <img src="img/asignaturas.jpg" width="1200" height="750" alt="Plataforma de tests de Seguridad Social con bloques de preguntas" loading="lazy">
-            <img src="img/actuariales.jpg" width="1200" height="750" alt="Portfolio actuarial como habitación interactiva con minijuegos" loading="lazy">
         </figure>
+    </section>
+
+    <section class="work" id="proyectos" aria-labelledby="h-proyectos">
+        <div class="work-head">
+            <h2 id="h-proyectos" class="display h2" data-r>Proyectos</h2>
+            <p class="note" data-r>Seis proyectos abiertos y gratuitos. Pasa el cursor por un lomo, o enfócalo con el teclado, para abrir su captura.</p>
+        </div>
+        <ul class="shelf" id="shelf">
+            <li class="s-atlas is-on" data-r>
+                <a href="https://luizluzuriaga.github.io/Gedankenpalast/">
+                    <span class="spine"><span class="n">Gedankenpalast</span><span class="k">Atlas 3D de estudio</span></span>
+                    <span class="open">
+                        <img src="img/atlas.jpg" width="1200" height="750" alt="El atlas 3D de Gedankenpalast: cúmulos de puntos blancos con un tema abierto en el panel lateral" loading="lazy">
+                        <span class="meta"><span class="y">2026</span><span class="d">Cuatro cúmulos de temas alrededor de El Gran Atractor.</span></span>
+                    </span>
+                </a>
+            </li>
+            <li class="s-guia" data-r>
+                <a href="https://luizluzuriaga.github.io/Gedankenpalast/Fundacion/guias/simulacion.html">
+                    <span class="spine"><span class="n">Simulación y modelos</span><span class="k">Guía de estudio</span></span>
+                    <span class="open">
+                        <img src="img/simulacion.jpg" width="1200" height="750" alt="Guía de Simulación y modelos para el análisis de datos actuariales y financieros" loading="lazy">
+                        <span class="meta"><span class="y">2026</span><span class="d">Generación de variables, Monte Carlo, regresión, Ridge, LASSO y Elastic Net.</span></span>
+                    </span>
+                </a>
+            </li>
+            <li class="s-guia" data-r>
+                <a href="https://luizluzuriaga.github.io/Gedankenpalast/Fundacion/guias/bayesiana.html">
+                    <span class="spine"><span class="n">Estadística bayesiana</span><span class="k">Guía de estudio</span></span>
+                    <span class="open">
+                        <img src="img/bayesiana.jpg" width="1200" height="750" alt="Guía de Estadística bayesiana con laboratorios interactivos" loading="lazy">
+                        <span class="meta"><span class="y">2026</span><span class="d">Con laboratorios interactivos.</span></span>
+                    </span>
+                </a>
+            </li>
+            <li class="s-guia" data-r>
+                <a href="https://luizluzuriaga.github.io/Gedankenpalast/Fundacion/guias/prevision_social.html">
+                    <span class="spine"><span class="n">Previsión social</span><span class="k">Guía de estudio</span></span>
+                    <span class="open">
+                        <img src="img/psc.jpg" width="1200" height="750" alt="Guía de Previsión social con líneas temporales" loading="lazy">
+                        <span class="meta"><span class="y">2026</span><span class="d">Con líneas temporales.</span></span>
+                    </span>
+                </a>
+            </li>
+            <li class="s-prac" data-r>
+                <a href="https://luizluzuriaga.github.io/Gedankenpalast/Fundacion/guias/seguridad_social.html">
+                    <span class="spine"><span class="n">Seguridad Social</span><span class="k">Guía de práctica</span></span>
+                    <span class="open">
+                        <img src="img/asignaturas.jpg" width="1200" height="750" alt="Plataforma de tests de Seguridad Social con bloques de preguntas" loading="lazy">
+                        <span class="meta"><span class="y">2026</span><span class="d">64 preguntas de test, 19 casos, 7 ejercicios de cálculo y 8 de desarrollo.</span></span>
+                    </span>
+                </a>
+            </li>
+            <li class="s-room" data-r>
+                <a href="https://luizluzuriaga.github.io/Actuariales/">
+                    <span class="spine"><span class="n">Portfolio actuarial</span><span class="k">Habitación interactiva</span></span>
+                    <span class="open">
+                        <img src="img/actuariales.jpg" width="1200" height="750" alt="Portfolio actuarial como habitación interactiva con minijuegos" loading="lazy">
+                        <span class="meta"><span class="y">2025</span><span class="d">Un portfolio convertido en habitación, con minijuegos.</span></span>
+                    </span>
+                </a>
+            </li>
+        </ul>
     </section>
 
     <section class="sphere" id="gedankenpalast" aria-labelledby="h-esfera">
         <div class="sphere-stage">
             <div class="orb" id="orb" aria-hidden="true"></div>
             <div class="s-a" id="s-a">
-                <h2 id="h-esfera" class="big">La bola<br>negra</h2>
+                <h2 id="h-esfera" class="display h2 big">La bola negra</h2>
                 <p class="lead">Sigue bajando. Detrás de este perfil hay una esfera de obsidiana que se abre a un atlas de conocimiento.</p>
             </div>
             <div class="s-b" id="s-b">
-                <h2 class="big">Gedankenpalast</h2>
-                <p class="lead">Cuatro cúmulos de temas que orbitan alrededor de El Gran Atractor, con una guía de estudio dentro de cada asignatura.</p>
-                <p class="exam" id="exam" hidden></p>
-                <a class="btn btn-light" id="enter" href="https://luizluzuriaga.github.io/Gedankenpalast/">Entrar en Gedankenpalast</a>
+                <h2 class="display giant">Gedankenpalast</h2>
+                <div class="s-b-text">
+                    <p class="lead">Cuatro cúmulos de temas que orbitan alrededor de El Gran Atractor, con una guía de estudio dentro de cada asignatura.</p>
+                </div>
+                <div class="reply">
+                    <h3 class="display reply-h">Entra al atlas</h3>
+                    <p class="exam" id="exam">Un atlas 3D con una guía de estudio dentro de cada asignatura.</p>
+                    <a class="bar-btn" id="enter" href="https://luizluzuriaga.github.io/Gedankenpalast/">Entrar en Gedankenpalast</a>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="about" id="sobre-mi" aria-labelledby="h-sobre">
-        <h2 id="h-sobre" class="sub" data-r>Sobre mí</h2>
-        <dl class="facts" data-r>
-            <div><dt>Estudios</dt><dd>Máster en Ciencias Actuariales y Financieras</dd></div>
-            <div><dt>Universidad</dt><dd>Universidad de Alcalá</dd></div>
-            <div><dt>Curso</dt><dd>Segundo año</dd></div>
-        </dl>
-        <p class="para" data-r>Convierto cada asignatura en algo que se pueda recorrer: guías con diagramas de flujo, simulaciones con el código delante y un atlas 3D donde los temas se relacionan. Todo en abierto y en español.</p>
-        <div class="lists" data-r>
-            <div>
-                <h3 class="lh">Asignaturas</h3>
-                <ul>
-                    <li><span>Simulación y modelos</span><span>2026</span></li>
-                    <li><span>Estadística bayesiana</span><span>2026</span></li>
-                    <li><span>Previsión social</span><span>2026</span></li>
-                    <li><span>Seguridad Social</span><span>2026</span></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="lh">Herramientas</h3>
-                <ul>
-                    <li><span>R y Python</span><span>Cálculo</span></li>
-                    <li><span>Three.js</span><span>Atlas 3D</span></li>
-                    <li><span>MathJax</span><span>Fórmulas</span></li>
-                    <li><span>GitHub Pages</span><span>Publicación</span></li>
-                </ul>
+        <h2 id="h-sobre" class="display h2" data-r>Sobre mí</h2>
+        <div class="about-grid">
+            <article class="letter" data-r>
+                <span class="dot" aria-hidden="true"></span>
+                <p>Soy Luiz y estudio el segundo año del Máster en Ciencias Actuariales y Financieras, en la Universidad de Alcalá.</p>
+                <p>Convierto cada asignatura en algo que se pueda recorrer: guías con diagramas de flujo, simulaciones con el código delante y un atlas 3D donde los temas se relacionan.</p>
+                <p>Todo está <mark>en abierto y en español</mark>.</p>
+                <p class="sign">Luiz Alberto Luzuriaga Izquierdo<span>Alcalá de Henares</span></p>
+                <div class="tear"><a href="https://github.com/LuizLuzuriaga">github.com/LuizLuzuriaga</a></div>
+            </article>
+            <div class="lists" data-r>
+                <section class="list-card">
+                    <h3 class="lh">Asignaturas</h3>
+                    <ul>
+                        <li><span>Simulación y modelos</span><span>2026</span></li>
+                        <li><span>Estadística bayesiana</span><span>2026</span></li>
+                        <li><span>Previsión social</span><span>2026</span></li>
+                        <li><span>Seguridad Social</span><span>2026</span></li>
+                    </ul>
+                </section>
+                <section class="list-card">
+                    <h3 class="lh">Herramientas</h3>
+                    <ul>
+                        <li><span>R y Python</span><span>Cálculo</span></li>
+                        <li><span>Three.js</span><span>Atlas 3D</span></li>
+                        <li><span>MathJax</span><span>Fórmulas</span></li>
+                        <li><span>GitHub Pages</span><span>Publicación</span></li>
+                    </ul>
+                </section>
             </div>
         </div>
-    </section>
-
-    <section class="choice" aria-labelledby="h-eleccion">
-        <h2 id="h-eleccion" class="choice-q"><span class="mask"><span class="line" data-r>¿Estudiar</span></span><span class="mask"><span class="line" data-r>o explorar?</span></span></h2>
-        <div class="choice-row" data-r>
-            <a class="btn" href="https://luizluzuriaga.github.io/Gedankenpalast/">Abrir el atlas</a>
-            <span class="or">o</span>
-            <a class="btn" href="https://github.com/LuizLuzuriaga">Ver en GitHub</a>
-        </div>
-        <p class="after" data-r>Las dos puertas llevan a proyectos abiertos y gratuitos.</p>
     </section>
 
 </main>
 
 <footer class="foot">
-    <div class="foot-cols">
-        <ul>
-            <li class="first">Luiz Alberto Luzuriaga Izquierdo</li>
-            <li>Alcalá de Henares</li>
-        </ul>
-        <ul>
-            <li class="first">Proyectos</li>
-            <li><a href="https://luizluzuriaga.github.io/Gedankenpalast/">Gedankenpalast</a></li>
-            <li><a href="https://luizluzuriaga.github.io/Actuariales/">Portfolio actuarial</a></li>
-            <li><a href="https://luizluzuriaga.github.io/Gedankenpalast/Fundacion/guias/seguridad_social.html">Seguridad Social</a></li>
-        </ul>
-        <ul>
-            <li class="first">En línea</li>
-            <li><a href="https://github.com/LuizLuzuriaga">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/luiz-luzuriaga-izquierdo">LinkedIn</a></li>
-        </ul>
-        <ul>
-            <li class="first">Créditos</li>
-            <li>Material de Simulación: David Atance del Olmo, CC BY-NC-SA 4.0</li>
-        </ul>
+    <svg class="stripe foot-stripe" aria-hidden="true" focusable="false"><use href="#bars"/></svg>
+    <div class="back">
+        <div class="back-msg">
+            <h2 class="display h2">Hasta pronto</h2>
+            <p>Todo lo que hay aquí está en abierto. Recórrelo con calma y, si algo te sirve para estudiar, mejor.</p>
+            <p class="credit">Material de Simulación: David Atance del Olmo, CC BY-NC-SA 4.0</p>
+        </div>
+        <div class="back-addr">
+            <img class="stamp" src="img/atlas.jpg" width="264" height="352" alt="" loading="lazy">
+            <ul>
+                <li>Alcalá de Henares</li>
+                <li><a href="https://github.com/LuizLuzuriaga">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/luiz-luzuriaga-izquierdo">LinkedIn</a></li>
+                <li><a href="https://luizluzuriaga.github.io/Gedankenpalast/">Gedankenpalast</a></li>
+                <li><a href="https://luizluzuriaga.github.io/Actuariales/">Portfolio actuarial</a></li>
+                <li><a href="https://luizluzuriaga.github.io/Gedankenpalast/Fundacion/guias/seguridad_social.html">Seguridad Social</a></li>
+            </ul>
+        </div>
+        <p class="legal">© 2026 Luiz Luzuriaga. Las capturas son de los propios proyectos.</p>
     </div>
-    <svg class="foot-mark" viewBox="0 0 1000 215" role="img" aria-label="Luiz Luzuriaga">
-        <text x="0" y="200" textLength="1000" lengthAdjust="spacingAndGlyphs">LUIZ LUZURIAGA</text>
-    </svg>
-    <p class="legal">© 2026 Luiz Luzuriaga. Las capturas son de los propios proyectos.</p>
 </footer>
 
 <script src="main.js"></script>
