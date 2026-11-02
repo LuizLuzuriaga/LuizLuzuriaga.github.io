@@ -37,6 +37,10 @@
         a.addEventListener('pointerenter', function () { show(a); });
         a.addEventListener('focus', function () { show(a); });
     });
+    // Las capturas restantes se cargan en reposo: así la primera pasada por la lista no enseña un hueco gris.
+    function warm() { imgs.forEach(function (m) { m.loading = 'eager'; }); }
+    if ('requestIdleCallback' in window) requestIdleCallback(warm, { timeout: 3000 });
+    else setTimeout(warm, 1500);
 
     // --- Cuenta atrás del examen de Simulación (la misma fecha de la agenda del atlas) ---
     var exam = document.getElementById('exam');
@@ -58,15 +62,22 @@
     var ticking = false;
     var ease = function (t) { return t * t * (3 - 2 * t); };
 
+    // La geometría del orbe solo cambia al redimensionar: se mide una vez, no en cada fotograma de scroll.
+    var d, far;
+    function measure() {
+        var vh = window.innerHeight, vw = window.innerWidth;
+        d = orb.offsetWidth;
+        var cx = orb.offsetLeft + d / 2, cy = orb.offsetTop + d / 2;
+        far = Math.hypot(Math.max(cx, vw - cx), Math.max(cy, vh - cy)) * 2;
+    }
+    measure();
+
     function frame() {
         ticking = false;
         var rect = section.getBoundingClientRect();
-        var vh = window.innerHeight, vw = window.innerWidth;
+        var vh = window.innerHeight;
         var p = clamp(-rect.top / (rect.height - vh), 0, 1);
 
-        var d = orb.offsetWidth;
-        var cx = orb.offsetLeft + d / 2, cy = orb.offsetTop + d / 2;
-        var far = Math.hypot(Math.max(cx, vw - cx), Math.max(cy, vh - cy)) * 2;
         var grow = clamp((p - 0.06) / 0.5, 0, 1);
         var scale = 1 + (far / d - 1) * ease(grow) * 1.02;
         // el orbe llega a la página desde abajo y respira un poco antes de crecer
@@ -83,6 +94,6 @@
     }
     function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(frame); } }
     window.addEventListener('scroll', onScroll, { passive: true });
-    window.addEventListener('resize', onScroll);
+    window.addEventListener('resize', function () { measure(); onScroll(); });
     frame();
 })();
