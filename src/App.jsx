@@ -227,6 +227,13 @@ function Proyectos() {
   );
 }
 
+const REDES = [
+  { n: 'GitHub', k: 'LuizLuzuriaga', href: 'https://github.com/LuizLuzuriaga' },
+  { n: 'LinkedIn', k: 'Luiz Luzuriaga Izquierdo', href: 'https://www.linkedin.com/in/luiz-luzuriaga-izquierdo/' },
+  { n: 'Instagram', k: '@luizluzuriaga · personal', href: 'https://www.instagram.com/luizluzuriaga/' },
+  { n: 'Instagram', k: '@lomismoysiempre · arte y música', href: 'https://www.instagram.com/lomismoysiempre/' },
+];
+
 function Sobre() {
   return (
     <section className="block" id="sobre-mi" aria-labelledby="h-sobre">
@@ -236,8 +243,13 @@ function Sobre() {
           <div><dt>Estudios</dt><dd>Máster en Ciencias Actuariales y Financieras</dd></div>
           <div><dt>Universidad</dt><dd>Universidad de Alcalá</dd></div>
           <div><dt>Curso</dt><dd>Segundo año</dd></div>
+          <div><dt>También me llaman</dt><dd>Terre</dd></div>
         </dl>
         <p className="para reveal">Convierto cada asignatura en algo que se pueda recorrer: guías con diagramas de flujo, simulaciones con el código delante y un atlas 3D donde los temas se relacionan. Todo en abierto y en español.</p>
+        <p className="para para-2 reveal">De joven improvisaba en el barrio, y esa costumbre se vino conmigo: cuando una situación de estrés lo pide, improvisar es mi mejor arma.</p>
+        <ul className="socials reveal" aria-label="Redes">
+          {REDES.map((r) => <li key={r.n}><a href={r.href} rel="noopener" data-hover><span>{r.n}</span><small>{r.k}</small></a></li>)}
+        </ul>
         <div className="lists reveal">
           <div><h3 className="lh">Asignaturas</h3><ul>{['Simulación y modelos', 'Estadística bayesiana', 'Previsión social', 'Seguridad Social'].map((x) => <li key={x}><span>{x}</span><span>2026</span></li>)}</ul></div>
           <div><h3 className="lh">Herramientas</h3><ul>{[['R y Python', 'Cálculo'], ['Three.js', 'Atlas 3D'], ['MathJax', 'Fórmulas'], ['GitHub Pages', 'Publicación']].map(([a, b]) => <li key={a}><span>{a}</span><span>{b}</span></li>)}</ul></div>
@@ -253,8 +265,7 @@ function Footer() {
       <div className="foot-cols">
         <ul><li className="first">Luiz Alberto Luzuriaga Izquierdo</li><li>Alcalá de Henares</li></ul>
         <ul><li className="first">Proyectos</li><li><a href="https://luizluzuriaga.github.io/Gedankenpalast/" data-hover>Gedankenpalast</a></li><li><a href="https://luizluzuriaga.github.io/Actuariales/" data-hover>Portfolio actuarial</a></li><li><a href="https://luizluzuriaga.github.io/Gedankenpalast/Fundacion/guias/seguridad_social.html" data-hover>Seguridad Social</a></li></ul>
-        <ul><li className="first">En línea</li><li><a href="https://github.com/LuizLuzuriaga" data-hover>GitHub</a></li><li><a href="https://www.linkedin.com/in/luiz-luzuriaga-izquierdo" data-hover>LinkedIn</a></li></ul>
-        <ul><li className="first">Créditos</li><li>Material de Simulación: David Atance del Olmo, CC BY-NC-SA 4.0</li></ul>
+        <ul><li className="first">En línea</li><li><a href="https://github.com/LuizLuzuriaga" data-hover>GitHub</a></li><li><a href="https://www.linkedin.com/in/luiz-luzuriaga-izquierdo" data-hover>LinkedIn</a></li><li><a href="https://www.instagram.com/luizluzuriaga/" rel="noopener" data-hover>Instagram · personal</a></li><li><a href="https://www.instagram.com/lomismoysiempre/" rel="noopener" data-hover>Instagram · arte y música</a></li></ul>
       </div>
       <p className="foot-mark" aria-hidden="true">Luiz Luzuriaga</p>
       <p className="legal">© 2026 Luiz Luzuriaga. Las capturas son de los propios proyectos.</p>
